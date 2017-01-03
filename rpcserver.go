@@ -1,4 +1,4 @@
-package net
+package main
 
 import (
 	"fmt"
@@ -18,7 +18,7 @@ type Quotient struct {
 type Arith int
 
 //func (t *T) MethodName(argType T1, replyType *T2) error
-func (t *Arith) Multiply(args *Args, quo *Quotient) error {
+func (t *Arith) Multiply(args *Args, reply *int) error {
 	*reply = args.A * args.B
 	return nil
 }
@@ -40,5 +40,5 @@ func main() {
 	if e != nil {
 		log.Fatal("listen error", e)
 	}
-	go http.Serve(l,nil)
+	http.Serve(l,nil)
 }
