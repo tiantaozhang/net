@@ -14,7 +14,7 @@ import (
 func main() {
 	defer catchPanic()
 	if len(os.Args) != 2 {
-		fmt.Fprintf(os.Stderr, "params err, %s\n", strings.Join(os.Args,","))
+		fmt.Fprintf(os.Stderr, "params err, %s\n", strings.Join(os.Args, ","))
 		os.Exit(1)
 	}
 	service := os.Args[1]
